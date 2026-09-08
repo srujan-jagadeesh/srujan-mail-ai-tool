@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    :root {
+      --bg-color: #0f172a;
+      --card-bg: #1e293b;
+      --accent-color: #ffdd00;
+      --accent-hover: #facc15;
+      --text-main: #f8fafc;
+      --text-sub: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      width: 320px;
+      padding: 16px;
+    }
+
+    .header-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-main);
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    /* Key Configuration Section */
+    .config-box {
+      background: var(--card-bg);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 12px;
+      margin-bottom: 16px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      font-size: 12px;
+      border: 1px solid #334155;
+      background-color: #0f172a;
+      color: var(--text-main);
+      border-radius: 6px;
+      outline: none;
+    }
+
+    .code-btn {
+      background: #0b57d0;
+      color: white;
+      border: none;
+      padding: 8px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 8px;
+      font-weight: 600;
+      width: 100%;
+      font-size: 12px;
+    }
+
+    .code-btn:hover {
+      background: #0842a0;
+    }
+
+    #status {
+      font-size: 11px;
+      margin-top: 6px;
+      text-align: center;
+    }
+
+    /* Donation Card Section */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 16px 12px;
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--accent-color);
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    p {
+      color: var(--text-sub);
+      font-size: 12px;
+      line-height: 1.4;
+      margin-bottom: 12px;
+    }
+
+    .coffee-btn {
+      background-color: var(--accent-color);
+      color: #000000;
+      border: none;
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .coffee-btn:hover {
+      background-color: var(--accent-hover);
+    }
+
+    .qr-container {
+      display: none;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px dashed rgba(255, 255, 255, 0.15);
+    }
+
+    .qr-container img {
+      width: 140px;
+      height: 140px;
+      border-radius: 8px;
+      border: 3px solid #ffffff;
+    }
+
+    .upi-id-label {
+      font-size: 11px;
+      color: var(--text-sub);
+      margin-top: 6px;
+    }
+
+    /* Change Key Button Styling */
+    .change-key-btn {
+      background: transparent;
+      color: var(--text-sub);
+      border: 1px solid #334155;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 11px;
+      font-weight: 500;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 12px;
+      transition: all 0.2s;
+    }
+
+    .change-key-btn:hover {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-main);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-title">srujan mail ai tool v1.0</div>
+
+  <!-- API Key Setup (Visible for first-time setup or when "Change Key" is clicked) -->
+  <div class="config-box" id="configBox">
+    <input type="password" id="apiKey" placeholder="Enter Gemini API Key..." />
+    <button id="saveBtn" class="code-btn">code</button>
+    <div id="status"></div>
+  </div>
+
+  <!-- Integrated Coffee/Donation Card -->
+  <div class="card">
+    <img src="profile.jpg" alt="Profile Picture" class="profile-img" />
+    
+    <h1>Buy Me a Coffee ☕</h1>
+    <p>Support the development of srujan mail ai tool!</p>
+
+    <button id="payBtn" class="coffee-btn">
+      <span>Buy me a coffee</span> • <span>₹12</span>
+    </button>
+
+    <div id="qrBox" class="qr-container">
+      <img id="qrCodeImg" src="" alt="Scan to Pay ₹12" />
+      <div class="upi-id-label">Scan via GPay / PhonePe / Paytm<br><b>srujansrujan128-1@oksbi</b></div>
+    </div>
+
+    <!-- Hidden by default; visible after saving a key -->
+    <button id="changeKeyBtn" class="change-key-btn" style="display: none;">🔑 Change API Key</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "srujan mail ai tool v1.0",
+  "version": "1.0",
+  "description": "Extracts Gmail thread context and generates drafts inside compose windows.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://mail.google.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["profile.jpg", "icon.png"],
+      "matches": ["https://mail.google.com/*"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
