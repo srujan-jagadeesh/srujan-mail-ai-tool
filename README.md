@@ -30,53 +30,50 @@ A lightweight, high-performance Chrome Extension (Manifest V3) that integrates G
 ├── profile.jpg            # Profile avatar for donation UI
 └── icon.png               # Extension branding icon
 
-🚀 Installation
-Clone or Download:
-Clone this repository or download it as a .ZIP file and extract it.
+# 🚀 Installation Guide
 
-Bash
-git clone [https://github.com/YOUR_USERNAME/srujan-mail-ai-tool.git](https://github.com/YOUR_USERNAME/srujan-mail-ai-tool.git)
-Open Chrome Extensions:
-Open Google Chrome and navigate to:
+Follow these steps to install and set up **srujan mail ai tool v1.0** on Google Chrome.
+
+---
+
+## 📋 Prerequisites
+
+- **Google Chrome** (or any Chromium-based browser like Brave or Microsoft Edge)
+- A free **Gemini API Key** from [Google AI Studio](https://aistudio.google.com/)
+
+---
+
+## 🛠️ Step-by-Step Installation
+
+### Step 1: Clone the Repository
+Open your terminal and clone the repository to your local computer:
+
+```bash
+git clone [https://github.com/srujan-jagadeesh/srujan-mail-ai-tool.git](https://github.com/srujan-jagadeesh/srujan-mail-ai-tool.git)
+cd srujan-mail-ai-tool
+
+Step 2: Open Chrome Extensions Page
+Open Google Chrome and navigate to the extensions management page by entering this URL in your address bar:
 
 Plaintext
 chrome://extensions/
-Enable Developer Mode:
-Toggle on Developer mode in the top-right corner.
+Step 3: Enable Developer Mode
+Locate the Developer mode toggle switch in the top-right corner of the Extensions page and turn it ON.
 
-Load Unpacked Extension:
-Click Load unpacked in the top-left corner and select the project folder containing manifest.json.
+Step 4: Load the Extension
+Click the Load unpacked button located in the top-left corner.
 
-🔑 Setup & Usage
+Select the srujan-mail-ai-tool directory folder (the folder containing manifest.json).
+
+The srujan mail ai tool extension will now be active in Chrome.
+
+🔑 Setup & Verification
 Obtain a free Gemini API key from Google AI Studio.
 
-Click the srujan mail ai tool icon in your Chrome toolbar.
+Click the srujan mail ai tool icon in your Chrome extension toolbar.
 
 Paste your Gemini API key into the input field and click code.
 
-Open Gmail and click Reply on any message.
+Open Gmail and click Reply on any email thread.
 
-Click the ✨ AI Reply button next to Gmail's Send button to generate a draft.
-
-Use the floating popup to shorten, formalize, expand, or customize the draft.
-
-🛠️ Tech Stack
-Platform: Chrome Extension Manifest V3
-
-Language: JavaScript (ES6+ Vanilla), HTML5, CSS3
-
-AI Model: Google Gemini API (gemini-3.6-flash)
-
-API Requests: Fetch API with dynamic context extraction
-
-Payment API: QR Server API (upi://pay protocol integration)
-
-☕ Support Development
-If you find this tool helpful, consider supporting the developer:
-
-UPI ID: srujansrujan128-1@oksbi
-
-Supported Apps: Google Pay, PhonePe, Paytm
-
-📄 License
-This project is open-source and available under the MIT License.
+Verify that the ✨ AI Reply button appears next to Gmail's Send button.
